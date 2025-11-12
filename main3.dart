@@ -13,3 +13,9 @@ class Compte {
      }
   }
 }
+void main() {
+  var compte1 = Compte("12345");
+  print("Solde initial : ${compte1.solde}");
+  compte1.depot(150.0); 
+  print("Solde après dépôt : ${compte1.solde}");
+}
