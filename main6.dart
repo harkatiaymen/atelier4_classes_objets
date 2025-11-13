@@ -4,7 +4,7 @@ abstract class Connectable {
   void connecter(String utilisateur);
   void deconnecter();
 }
-abstract class ServeurAPI implements Connectable{
+ class ServeurAPI implements Connectable{
   @override
   void connecter(String utilisateur) {
     print("ServeurAPI : Connexion établie pour $utilisateur.");
@@ -27,6 +27,17 @@ class BaseDeDonnees implements Connectable {
   @override
   void deconnecter() {
     print("BaseDeDonnees : Déconnexion de la base réussie.");
+  }
+}
+void main() {
+  var serveur = ServeurAPI();   // classe concrète
+  var bdd = BaseDeDonnees();    // classe concrète
+
+  List<Connectable> services = [serveur, bdd];  // ok, type abstrait mais instances concrètes
+
+  for (var service in services) {
+    service.connecter("Aymen");
+    service.deconnecter();
   }
 }
 
