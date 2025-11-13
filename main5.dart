@@ -24,3 +24,23 @@ class Rectangle extends Forme {
     return longueur * largeur;
   }
 }
+class Rectangleforme extends Forme {
+  final double longueur;
+  final double largeur;
+  Rectangleforme(this.longueur, this.largeur);
+  @override
+  double calculerAire() {
+    return longueur * largeur;
+  }
+}
+void main() {
+  var cercle = Cercle(5);
+  var rectangle = Rectangle(4, 6);
+
+  cercle.afficherMessage();
+  print("Aire du cercle : ${cercle.calculerAire()}");
+  rectangle.afficherMessage();
+  print("Aire du rectangle : ${rectangle.calculerAire()}");
+}
+
+
