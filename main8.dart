@@ -25,3 +25,14 @@ class Livre {
       }
 
   }
+  void main() {
+
+   var livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
+   var livre2 = Livre("1984", "George Orwell");
+   var roman1 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
+
+   livre1.afficherInfos();
+   livre2.afficherInfos();
+   roman1.afficherInfos();
+   Livre.afficherTotalLivres();
+  }
