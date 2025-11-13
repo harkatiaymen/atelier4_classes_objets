@@ -4,6 +4,12 @@ class Tache {
    Tache(this.description) {
     nombreTotal++;
   }
-  
 
+}
+void main() {
+  var t1 = Tache("Faire les devoirs");
+  var t2 = Tache("Aller au supermarché");
+  var t3 = Tache("Faire du sport");
+
+  print("Nombre total de tâches créées : ${Tache.nombreTotal}");
 }
